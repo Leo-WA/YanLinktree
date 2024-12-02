@@ -21,7 +21,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
 body {
@@ -37,31 +37,31 @@ body {
 }
 
 .bg-text-animation {
-    position: absolute;
-    top: 5rem;
     font-size: 12rem;
     text-transform: uppercase;
     font-weight: 900;
     -webkit-text-stroke: 2px var(--secondary-bg);
     -webkit-text-fill-color: transparent;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    z-index: 100;
+    z-index: 1;
     user-select: none;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-top: -5rem; /* Ajuste para aproximar o texto */
 }
 
 /* Media Query para telas menores */
 @media (max-width: 768px) {
     .bg-text-animation {
-        font-size: 6rem;
+        font-size: 6rem; /* Diminui o tamanho da fonte */
     }
     body {
-        padding-top: 5rem;
+        padding-top: 5rem; /* Reduz o espaço em telas menores */
     }
 }
 
 @media (max-width: 480px) {
     .bg-text-animation {
-        font-size: 3rem;
+        font-size: 3rem; /* Diminui ainda mais para telas muito pequenas */
     }
     body {
         padding-top: 5rem;
@@ -74,7 +74,7 @@ body {
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: top;
-    margin-top: 5rem;
+    margin-top: 5rem; /* Ajuste para empurrar a foto para baixo */
 }
 
 a {
